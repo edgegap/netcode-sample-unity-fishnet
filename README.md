@@ -9,4 +9,4 @@ Note: This project uses a few free assets from the Unity Asset Store. These asse
 
 ## Tutorial
 
-You can see the [full documentation here](https://docs.edgegap.com/)
+You can see the [full documentation here](https://docs.edgegap.com/docs/sample-projects/fishnet-on-edgegap)
