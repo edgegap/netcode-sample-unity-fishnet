@@ -176,7 +176,7 @@ namespace SpaceEdge
             var requestJson = new JSON();
             //Please refer to https://docs.edgegap.com/api/#operation/deploy for more details.
             requestJson.Add("app_name", AppName);
-            requestJson.Add("app_version", AppVersion);
+            requestJson.Add("version_name", AppVersion);
             requestJson.Add("ip_list", new[] { _publicIP });
             //Convert the JSON object to a ByteArray and format it for "application/json" Content-Type.
             _requestData = new StringContent(requestJson.CreateString(), Encoding.UTF8, TypeHeaderValue);
