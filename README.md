@@ -1,4 +1,4 @@
-# Fish-Net on Edgegap
+# FishNet on Edgegap
 
 This guide will help you create a headless server on Edgegap for a Unity project using [Fishnet](https://github.com/FirstGearGames/FishNet) as its networking solution.
 
