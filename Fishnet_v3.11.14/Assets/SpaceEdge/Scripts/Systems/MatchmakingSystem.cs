@@ -23,19 +23,19 @@ namespace SpaceEdge
         ///     Name of the EdgeGap app we are trying to connect to
         ///     Please refer to the "EdgeGap FishNet Sample Guide" for detailed instruction on how to configure app name.
         /// </summary>
-        [SerializeField] private string AppName = "fishnet-v3";
+        [SerializeField] private string AppName = "APP_NAME";
 
         /// <summary>
         ///     Version of the EdgeGap app we are trying to connect to
         ///     Please refer to the "EdgeGap FishNet Sample Guide" for detailed instruction on how to configure app version.
         /// </summary>
-        [SerializeField] private string AppVersion = "3.0.0";
+        [SerializeField] private string AppVersion = "APP_VERSION";
 
         /// <summary>
         ///     Used by the HTTP request's Authorization header.
         ///     Please refer to the "EdgeGap FishNet Sample Guide" for detailed instruction on how to acquire this value.
         /// </summary>
-        [SerializeField] private string AuthHeaderValue = "bfcea7e4-892a-4f68-a2ca-22682aeb47ea";
+        [SerializeField] private string AuthHeaderValue = "EDGEGAP_API_TOKEN";
 
         /// <summary>
         ///     Used by the HTTP request's Content-Type header.

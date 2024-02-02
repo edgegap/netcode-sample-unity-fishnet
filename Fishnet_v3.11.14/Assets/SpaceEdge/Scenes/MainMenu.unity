@@ -541,9 +541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b259e353e158c456d85dce46edc50782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AppName: fishnet-v3
-  AppVersion: 3.0.0
-  AuthHeaderValue: bfcea7e4-892a-4f68-a2ca-22682aeb47ea
+  AppName: APP_NAME
+  AppVersion: APP_VERSION
+  AuthHeaderValue: EDGEGAP_API_TOKEN
 --- !u!4 &566877095
 Transform:
   m_ObjectHideFlags: 0
