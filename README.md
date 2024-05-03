@@ -9,4 +9,6 @@ Note: This project uses a few free assets from the Unity Asset Store. These asse
 
 ## Tutorial
 
+To test a sample project, select one of the available folders and open it with the Unity Hub.
+
 You can see the full documentation for the [base Fishnet example here](https://docs.edgegap.com/docs/sample-projects/fishnet-on-edgegap) or for [Fishnet with WebGL here](https://docs.edgegap.com/docs/sample-projects/fishnet-webgl).

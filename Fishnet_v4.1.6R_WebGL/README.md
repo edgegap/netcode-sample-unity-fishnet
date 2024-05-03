@@ -8,4 +8,6 @@ This project is tested on Unity version `2021.3.16f1` and Fishnet version `4.1.6
 
 ## Tutorial
 
+To test the sample project, open the `Fishnet_v4.1.6R_WebGL` folder with the Unity Hub.
+
 You can see the [full documentation here](https://docs.edgegap.com/docs/sample-projects/fishnet-webgl)
