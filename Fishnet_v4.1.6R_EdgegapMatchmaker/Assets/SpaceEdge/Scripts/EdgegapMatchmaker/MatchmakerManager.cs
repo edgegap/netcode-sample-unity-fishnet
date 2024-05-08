@@ -34,7 +34,7 @@ public class MatchmakerManager : ScriptableObject
                 },
                 filter_data = new
                 {
-                    elo = scoreValue,
+                    score = scoreValue,
                 },
             }
 
