@@ -11,7 +11,7 @@ Note: This project uses a few free assets from the Unity Asset Store. These asse
 
 | Folder | FishNet | What it shows |
 |---|---|---|
-| `Fishnet_v4.1.6R_WebGL_Matchmaker` | 4.1.6R (Bayou) | **Recommended.** [Edgegap Matchmaker](https://docs.edgegap.com/learn/matchmaking) with WebGL and desktop clients, servers that stop themselves, and no API token in the client. See its [README](Fishnet_v4.1.6R_WebGL_Matchmaker/README.md). |
+| `Fishnet_v4.1.6R_WebGL_Matchmaker` | 4.1.6R (Bayou) | **Recommended.** WebGL and desktop clients, servers that stop themselves, and no API token in the client. Connects directly to a server by default; the [Edgegap Matchmaker](https://docs.edgegap.com/learn/matchmaking) is an opt-in toggle. See its [README](Fishnet_v4.1.6R_WebGL_Matchmaker/README.md). |
 | `Fishnet_v4.1.6R_WebGL` | 4.1.6R (Bayou) | WebGL client, `MatchmakingSystem` calling the Edgegap API directly. |
 | `Fishnet_v4.1.6R_EdgegapMatchmaker` | 4.1.6R (Tugboat) | Legacy matchmaker (`selectors`/`filters` config). That config format isn't accepted by the current matchmaker, so use `Fishnet_v4.1.6R_WebGL_Matchmaker` instead. |
 | `Fishnet_v3.11.14`, `Fishnet_v2.5.2` | 3.x / 2.x (Tugboat) | `MatchmakingSystem` calling the Edgegap API directly. |

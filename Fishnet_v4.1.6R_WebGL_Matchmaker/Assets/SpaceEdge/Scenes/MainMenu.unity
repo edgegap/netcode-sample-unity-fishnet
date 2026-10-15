@@ -675,6 +675,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b259e353e158c456d85dce46edc50782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEdgegapMatchmaker: 0
+  directAddress: localhost
+  directPort: 7770
+  directUseWss: 0
 --- !u!4 &566877095
 Transform:
   m_ObjectHideFlags: 0
