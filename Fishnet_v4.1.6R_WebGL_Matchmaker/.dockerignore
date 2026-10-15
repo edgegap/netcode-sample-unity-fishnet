@@ -1,0 +1,3 @@
+# Build context is the Unity project root: send only the server build to Docker.
+*
+!Builds/EdgegapServer/**

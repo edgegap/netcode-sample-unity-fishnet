@@ -1,0 +1,57 @@
+{
+  "name": "com.edgegap.unity-sdk",
+  "version": "3.5.5",
+  "displayName": "Edgegap SDK",
+  "description": "Get started quickly with Edgegap Matchmaking and Server Browser.",
+  "unity": "2021.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://docs.edgegap.com/unity/developer-tools#software-development-kit",
+  "hideInEditor": false,
+  "changelogUrl": "https://docs.edgegap.com/docs/release-notes",
+  "licensesUrl": "https://choosealicense.com/licenses/mit/",
+  "samples": [
+    {
+      "displayName": "Deployment Agent Example",
+      "description": "Get environment variables and stop your Deployment.",
+      "path": "Samples~/DeploymentAgent"
+    },
+    {
+      "displayName": "Server Browser - Auto-Assign",
+      "description": "Get started with auto-assigned reservations.",
+      "path": "Samples~/ServerBrowserAutoAssign"
+    },
+    {
+      "displayName": "Server Browser - Custom Search",
+      "description": "Provide manual choice to players and/or customize flow with your own reservation logic.",
+      "path": "Samples~/ServerBrowserCustomSearch"
+    },
+    {
+      "displayName": "Matchmaking - Simple Example",
+      "description": "Get started with minimal matchmaking example.",
+      "path": "Samples~/MatchmakingSimple"
+    },
+    {
+      "displayName": "Matchmaking - Region Picker UI",
+      "description": "Explore UI integration with manual region selection.",
+      "path": "Samples~/MatchmakingRegionPicker"
+    },
+    {
+      "displayName": "Matchmaking - Group Up UI",
+      "description": "Explore UI integration with the group-up flow.",
+      "path": "Samples~/MatchmakingGroupUp"
+    },
+    {
+      "displayName": "Matchmaking - Backfill",
+      "description": "Reuse server capacity to add players to ongoing deployments.",
+      "path": "Samples~/MatchmakingBackfill"
+    }
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
+  },
+  "author": {
+    "name": "Edgegap Technologies",
+    "email": "contact@edgegap.com",
+    "url": "https://www.edgegap.com"
+  }
+}
