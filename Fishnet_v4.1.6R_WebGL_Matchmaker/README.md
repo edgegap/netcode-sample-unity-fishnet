@@ -17,14 +17,22 @@ Tested with Unity `2021.3.45f2`, FishNet `4.1.6R`, the Bayou WebSocket transport
 | Matchmaking client | `Assets/Edgegap/EdgegapMatchmakingClient.cs` | Matchmaker mode only. Creates a ticket (SDK Group Up flow, a group of one), polls it until `HOST_ASSIGNED`, then connects with `wss://{fqdn}:{external port}`. |
 | Server lifecycle | `Assets/Edgegap/EdgegapServerLifecycle.cs` | In server builds, starts the FishNet server on `0.0.0.0:7770`. On Edgegap it reads the injected variables and stops the deployment when no one joins within 120 s or once everyone has left for 30 s. |
 | Persistence | `Assets/Edgegap/EdgegapPersistence.cs` | Keeps the `Edgegap` object alive across the MainMenu → BattleScene → MainMenu scene changes. |
-| Edgegap SDK | `Packages/com.edgegap.unity-sdk` | SDK 3.5.5, embedded with one fix (see below). |
+| Edgegap SDK | `Packages/manifest.json` | Git package from [edgegap-unity-sdk](https://github.com/edgegap/edgegap-unity-sdk), not a copy, so SDK updates reach the sample (see below). |
 | Build helpers | `Assets/Edgegap/Editor/` | Command-line Linux server and client builds, plus scene setup. |
 
 The server no longer relies on FishNet's **Start On Headless**: the lifecycle component starts it, so the same scene works for client and server builds without toggling anything.
 
-### Embedded SDK fix
+### Edgegap SDK version
 
-Before Unity 2022.3, SDK 3.5.5 sends POST bodies through `UnityWebRequest.Post(url, string)`, which form-encodes the JSON. The matchmaker answers every ticket request with HTTP 400. The embedded copy in `Packages/com.edgegap.unity-sdk` sends the JSON raw (`Runtime/SafeHttpRequest.cs`), as proposed upstream in [edgegap/edgegap-unity-sdk#68](https://github.com/edgegap/edgegap-unity-sdk/pull/68). On Unity 2022.3 or newer you can use the git package instead: `"com.edgegap.unity-sdk": "https://github.com/edgegap/edgegap-unity-sdk.git#3.5.5"`.
+The SDK comes from its git repository, so the sample follows SDK updates instead of carrying a frozen copy.
+
+For now the manifest tracks the `fix/post-json-body-pre-2022-3` branch, which is the SDK's `main` plus one fix. Before Unity 2022.3, SDK 3.5.5 sends POST bodies through `UnityWebRequest.Post(url, string)`, which form-encodes the JSON, and the matchmaker answers every ticket request with HTTP 400. The fix sends the JSON raw (`Runtime/SafeHttpRequest.cs`) and is under review in [edgegap/edgegap-unity-sdk#68](https://github.com/edgegap/edgegap-unity-sdk/pull/68). Once it is merged, switch the manifest to `#main`:
+
+```json
+"com.edgegap.unity-sdk": "https://github.com/edgegap/edgegap-unity-sdk.git#main"
+```
+
+Unity records the resolved commit in `Packages/packages-lock.json` the first time it opens the project. To pull a newer SDK into a project you already opened, delete the `com.edgegap.unity-sdk` entry from `packages-lock.json` (or remove and re-add the package) and let Unity resolve it again.
 
 ## 1. Play locally (direct connection)
 
