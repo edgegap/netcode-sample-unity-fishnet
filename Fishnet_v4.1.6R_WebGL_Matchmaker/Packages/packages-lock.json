@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.edgegap.unity-sdk": {
-      "version": "file:com.edgegap.unity-sdk",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.2"
-      }
-    },
     "com.unity.collab-proxy": {
       "version": "2.5.2",
       "depth": 0,
