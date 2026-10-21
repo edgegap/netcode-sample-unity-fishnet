@@ -7,7 +7,7 @@ The SpaceEdge FishNet sample on Edgegap dedicated servers. **Start Game** has tw
 
 In both modes the game client holds no Edgegap API token; matchmaker mode only uses the matchmaker's Auth Token, which is safe to ship in clients. The server stops its own Edgegap deployment once the match is empty.
 
-Tested with Unity `2021.3.45f2`, FishNet `4.1.6R`, the Bayou WebSocket transport and Edgegap Unity SDK `3.5.5`.
+Tested with Unity `2021.3.45f2`, FishNet `4.1.6R`, the Bayou WebSocket transport and Edgegap Unity SDK `3.5.5` with the POST fix that shipped in `3.5.6` (see [Edgegap SDK version](#edgegap-sdk-version)).
 
 ## How it works
 
@@ -26,11 +26,13 @@ The server no longer relies on FishNet's **Start On Headless**: the lifecycle co
 
 The SDK comes from its git repository, so the sample follows SDK updates instead of carrying a frozen copy.
 
-For now the manifest tracks the `fix/post-json-body-pre-2022-3` branch, which is the SDK's `main` plus one fix. Before Unity 2022.3, SDK 3.5.5 sends POST bodies through `UnityWebRequest.Post(url, string)`, which form-encodes the JSON, and the matchmaker answers every ticket request with HTTP 400. The fix sends the JSON raw (`Runtime/SafeHttpRequest.cs`) and is under review in [edgegap/edgegap-unity-sdk#68](https://github.com/edgegap/edgegap-unity-sdk/pull/68). Once it is merged, switch the manifest to `#main`:
+The manifest tracks the SDK's `main` branch:
 
 ```json
 "com.edgegap.unity-sdk": "https://github.com/edgegap/edgegap-unity-sdk.git#main"
 ```
+
+This sample needs SDK `3.5.6` or later. Before Unity 2022.3, SDK 3.5.5 and earlier send POST bodies through `UnityWebRequest.Post(url, string)`, which form-encodes the JSON, and the matchmaker answers every ticket request with HTTP 400. [edgegap/edgegap-unity-sdk#68](https://github.com/edgegap/edgegap-unity-sdk/pull/68) fixed this by sending the JSON raw (`Runtime/SafeHttpRequest.cs`), and the fix shipped in 3.5.6. If you pin a tag instead of `main`, use `#3.5.6` or newer.
 
 Unity records the resolved commit in `Packages/packages-lock.json` the first time it opens the project. To pull a newer SDK into a project you already opened, delete the `com.edgegap.unity-sdk` entry from `packages-lock.json` (or remove and re-add the package) and let Unity resolve it again.
 
