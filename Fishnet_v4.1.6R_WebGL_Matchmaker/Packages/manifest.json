@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.edgegap.unity-sdk": "https://github.com/edgegap/edgegap-unity-sdk.git#fix/post-json-body-pre-2022-3",
+    "com.edgegap.unity-sdk": "https://github.com/edgegap/edgegap-unity-sdk.git#main",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.31",
