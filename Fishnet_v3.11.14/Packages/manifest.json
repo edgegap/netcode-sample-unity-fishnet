@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.edgegap.unity-servers-plugin": "https://github.com/edgegap/edgegap-unity-plugin.git#sample/unity-fishnet-v3.11.14",
+    "com.edgegap.unity-servers-plugin": "https://github.com/edgegap/edgegap-unity-plugin.git#3892086333f0e6bd5e2d4f5ee10145adf082df8c",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.15",
