@@ -26,7 +26,7 @@ The recommended project was tested with Unity `2021.3.45f2`; open it with that e
 
 ### Playing alone
 
-**Playing alone:** matchmaking is off by default in `Fishnet_v4.1.6R_WebGL_Matchmaker`, so a single client connects directly to `localhost:7770` (or the server address you set) and plays on its own. With the matchmaker turned on, the shipped `matchmaker-config.json` (matchmaker `3.3.2`) matches 2 to 4 players, with a 30 s expansion that lowers the minimum to 1 and a 5-minute ticket expiration. In our tests a lone ticket did not get a server at the 30 s expansion; it only reached `HOST_ASSIGNED` around its 5-minute expiration. Test the matchmaker with two clients.
+**Playing alone:** matchmaking is off by default in `Fishnet_v4.1.6R_WebGL_Matchmaker`, so a single client connects directly to `localhost:7770` (or the server address you set) and plays on its own. With the matchmaker turned on, the shipped `matchmaker-config.json` (matchmaker `3.3.2`) matches 2 to 4 players, with a 20 s expansion that lowers the minimum to 1 and a 30 s ticket expiration. With the earlier 5-minute expiration, a lone ticket in our tests did not get a server at the expansion; it only reached `HOST_ASSIGNED` around its expiration. The 30 s expiration keeps that wait short; the lone-player case was not re-tested with it. Test the matchmaker with two clients.
 
 ### Known limitation
 
