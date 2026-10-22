@@ -1,0 +1,99 @@
+MIT License
+
+Copyright (c) 2022-2026 Edgegap
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The MIT License above covers the code written by Edgegap in this repository
+(for example Assets/SpaceEdge and Assets/Edgegap in each project folder, the
+Dockerfiles and the matchmaker configuration). It does not cover the
+third-party code and assets listed below, which keep their own licences.
+
+
+THIRD-PARTY
+===========
+
+Paths are relative to each project folder (Fishnet_v2.5.2, Fishnet_v3.11.14,
+Fishnet_v4.1.6R_EdgegapMatchmaker, Fishnet_v4.1.6R_WebGL,
+Fishnet_v4.1.6R_WebGL_Matchmaker).
+
+Fish-Networking (FishNet), by FirstGearGames (Benjamin Berwick)
+  Path: Assets/FishNet
+  Licence: the Fish-Networking licence in Assets/FishNet/LICENSE.txt. It is not
+  MIT: it grants a no-charge, royalty-free licence to reproduce, modify and use
+  FishNet for games and other content, and forbids other networking solutions
+  from using or reimplementing it. Fishnet_v2.5.2 carries an earlier wording
+  of the same licence. Upstream: https://github.com/FirstGearGames/FishNet
+
+  Bundled inside Assets/FishNet, each with its own licence file:
+  - Mono.Cecil 0.11.4 (Assets/FishNet/CodeGenerating/cecil-0.11.4):
+    MIT, Copyright (c) 2008-2015 Jb Evain, Copyright (c) 2008-2011 Novell, Inc.
+  - Code analysis plugin (Assets/FishNet/Plugins/CodeAnalysis or
+    Assets/FishNet/Runtime/Plugins/CodeAnalysis):
+    MIT, Copyright (c) 2022 Abdelfattah-Radwan
+  - ColliderRollback (Assets/FishNet/Runtime/Plugins/ColliderRollback):
+    the Fish-Networking licence
+  - Bayou transport (Assets/FishNet/Plugins/Bayou, 4.1.6R projects):
+    MIT, Copyright (c) 2020 Mirror Networking, Copyright (c) 2020 James Frowen,
+    Copyright (c) 2022 Benjamin Berwick of FirstGearGames LLC
+  - SimpleWebTransport (Assets/FishNet/Plugins/Bayou/SimpleWebTransport):
+    MIT, Copyright (c) 2020 Mirror Networking, Copyright (c) 2020 James Frowen
+  - LiteNetLib, used by the Tugboat transport
+    (Assets/FishNet/Runtime/Transporting/Transports/Tugboat/LiteNetLib):
+    no licence file in this repository; upstream LiteNetLib
+    (https://github.com/RevenantX/LiteNetLib) is MIT licensed.
+
+Edgegap Unity SDK (com.edgegap.unity-sdk), by Edgegap
+  Fetched by the Unity Package Manager from
+  https://github.com/edgegap/edgegap-unity-sdk (tag 3.5.6), not copied here.
+  Licence: MIT.
+
+Edgegap Unity plugin (com.edgegap.unity-servers-plugin), by Edgegap
+  Fetched by the Unity Package Manager from
+  https://github.com/edgegap/edgegap-unity-plugin, not copied here.
+  Licence: MIT.
+
+TextMesh Pro Essential Resources, by Unity Technologies
+  Path: Assets/TextMesh Pro
+  Imported from the com.unity.textmeshpro package; Unity's package licence
+  applies. The bundled Liberation Sans font is under the SIL Open Font
+  License (Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt).
+
+Asset packs (the authors keep all rights; not covered by the MIT License above)
+  - Cartoon FX Free, (c) 2019 Jean Moreno (JMO)
+    Path: Assets/JMO Assets
+    Free Unity Asset Store pack, Standard Unity Asset Store EULA.
+    https://assetstore.unity.com/packages/p/cartoon-fx-remaster-free-109565
+  - Star Sparrow Modular Spaceship
+    Path: Assets/StarSparrow
+    Free Unity Asset Store pack, Standard Unity Asset Store EULA.
+    https://assetstore.unity.com/packages/3d/vehicles/space/star-sparrow-modular-spaceship-73167
+  - Starfield Skybox, by Pulsar Bytes
+    Path: Assets/Starfield Skybox
+    Free Unity Asset Store pack, Standard Unity Asset Store EULA.
+    https://assetstore.unity.com/packages/2d/textures-materials/sky/starfield-skybox-92717
+  - Total JSON, by Leguar
+    Path: Assets/TotalJSON
+    Free Unity Asset Store pack, Standard Unity Asset Store EULA.
+    https://assetstore.unity.com/publishers/21809
+  - Sci-Fi Sfx, by Little Robot Sound Factory
+    Path: Assets/Sci-Fi-Sfx
+    CC-BY 3.0. Credit: Little Robot Sound Factory,
+    www.littlerobotsoundfactory.com
+    https://opengameart.org/content/sci-fi-sound-effects-library
