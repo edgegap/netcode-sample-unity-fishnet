@@ -76,7 +76,7 @@ The server stops its deployment 120 s after it starts if nobody joins, and 30 s 
 3. In `MainMenu`, copy the **API URL** and **Auth Token** into the `Edgegap` object's **Edgegap Matchmaking Client** (`Base Url`, `Auth Token`), and tick **Use Edgegap Matchmaker** on `MatchmakingSystem`.
 4. Rebuild the client, serve it from an origin listed in `allowed_cors_origins` (e.g. `http://localhost:8080`), open two tabs and click **Start Game** in both. The `casual` profile matches 2 to 4 players.
 
-**Playing alone:** with the default direct connection there is no queue: one client connects straight to `localhost:7770` (or the deployment you set) and plays on its own. With the matchmaker on, the shipped `matchmaker-config.json` (matchmaker `3.3.2`) needs at least 2 players (`min_team_size: 2`), with a 30 s expansion that lowers `min_team_size` to 1 and a 5-minute `ticket_expiration_period`. In our tests a lone ticket did not get a server at the 30 s expansion; it only reached `HOST_ASSIGNED` around its 5-minute expiration. Test the matchmaker with two clients.
+**Playing alone:** with the default direct connection there is no queue: one client connects straight to `localhost:7770` (or the deployment you set) and plays on its own. With the matchmaker on, the shipped `matchmaker-config.json` (matchmaker `3.3.2`) needs at least 2 players (`min_team_size: 2`), with a 20 s expansion that lowers `min_team_size` to 1 and a 30 s `ticket_expiration_period`. With the earlier 5-minute expiration, a lone ticket in our tests did not get a server at the expansion; it only reached `HOST_ASSIGNED` around its expiration. The 30 s expiration keeps that wait short; the lone-player case was not re-tested with it. Test the matchmaker with two clients.
 
 ### Shipping a new build
 

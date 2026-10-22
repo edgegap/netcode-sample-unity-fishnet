@@ -7,7 +7,7 @@
   ],
   "profiles": {
     "casual": {
-      "ticket_expiration_period": "5m",
+      "ticket_expiration_period": "30s",
       "ticket_removal_period": "1m",
       "group_inactivity_removal_period": "5m",
       "application": {
@@ -26,7 +26,7 @@
           }
         },
         "expansions": {
-          "30": {
+          "20": {
             "match_size": {
               "min_team_size": 1
             }
