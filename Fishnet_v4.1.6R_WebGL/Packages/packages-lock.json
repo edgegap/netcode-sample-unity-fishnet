@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.edgegap.unity-servers-plugin": {
-      "version": "https://github.com/edgegap/edgegap-unity-plugin.git#sample/unity-fishnet-v4.1.6R-webgl",
+      "version": "https://github.com/edgegap/edgegap-unity-plugin.git#a7112640727a910651fa47f8145a4a5b795570fb",
       "depth": 0,
       "source": "git",
       "dependencies": {
